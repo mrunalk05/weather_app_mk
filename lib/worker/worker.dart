@@ -48,8 +48,8 @@ class worker {
     var response = await http.get(url);
     Map<String, dynamic> data = jsonDecode(response.body);
 
-    Map<String, dynamic> weather_data = data['weather'];
-    String getDesc = weather_data['description'];
+    // Map<String, dynamic> weather_data = data['weather'];
+    // String getDesc = weather_data['description'];
 
     // Map<String, dynamic> main = data['main'];
     // double getTemp = main['temp'];
@@ -65,7 +65,7 @@ class worker {
     // double getSunrise = sys['sunrise'];
     // double getSunset = sys['sunset'];
 
-    String description = getDesc;
+   // String description = getDesc;
     // String temp = getTemp.toString();
     // String temp_min = getTemp_min.toString();
     // String temp_max = getTemp_max.toString();
