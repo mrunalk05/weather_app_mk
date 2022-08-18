@@ -25,10 +25,10 @@ class _LoadingState extends State<Loading> {
         "https://jsonplaceholder.typicode.com/todos/1");
     var response = await http.get(url);
     Map data = jsonDecode(response.body);
-    
-     Map weatherdata = data['weather'];
-     String desc = weatherdata['description'];
-     print(desc);
+
+    Map weatherdata = data['weather'];
+    final String desc = weatherdata['description'];
+    print(desc);
   }
 
   @override
