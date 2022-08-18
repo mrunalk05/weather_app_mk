@@ -1,7 +1,9 @@
 //import 'dart:ffi';
 
 import 'package:flutter/material.dart';
-import 'package:timeapp/worker/worker.dart';
+//import 'package:timeapp/worker/worker.dart';
+import 'package:http/http.dart' as http;
+import 'dart:convert';
 
 class Loading extends StatefulWidget {
   const Loading({Key? key}) : super(key: key);
@@ -10,17 +12,26 @@ class Loading extends StatefulWidget {
 
 class _LoadingState extends State<Loading> {
   // worker instance = worker(location: 'Mumbai');
-  void StartApp() async {
-    worker instance = worker(location: 'Mumbai');
-    await instance.getData();
-    print(instance.description);
-  }
+  // void StartApp() async {
+  //   worker instance = worker(location: 'Mumbai');
+  //   await instance.getData();
+  //   print(instance.description);
+  // }
+  // late Future<Album> futurealbum;
 
   @override
   void initState() {
     // TODO: implement initState
-    StartApp();
     super.initState();
+    // futurealbum = fetchAlbum();
+  }
+
+  void gettime() async {
+    var url = Uri.parse(
+        "https://api.openweathermap.org/data/2.5/weather?q=mumbai&appid=1e9daa69c1df496ee8275c163e1721bf");
+    var response = await http.get(url);
+    Map<String, dynamic> data = jsonDecode(response.body);
+    Map<String, dynamic> weatherdata = data['weather'];
   }
 
   @override
