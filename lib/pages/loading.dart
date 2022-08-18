@@ -33,7 +33,7 @@ class _LoadingState extends State<Loading> {
     Map data = jsonDecode(response.body);
     Map weatherdata = data['weather'];
     String desc = weatherdata['description'];
-    print(desc);
+    print(data);
   }
 
   @override
