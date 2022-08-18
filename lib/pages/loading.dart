@@ -23,13 +23,14 @@ class _LoadingState extends State<Loading> {
   void initState() {
     // TODO: implement initState
     super.initState();
+    gettime();
     // futurealbum = fetchAlbum();
   }
 
   void gettime() async {
     var url = Uri.parse(
-       // "https://api.openweathermap.org/data/2.5/weather?q=mumbai&appid=1e9daa69c1df496ee8275c163e1721bf");
-       "https://jsonplaceholder.typicode.com/todos/1");
+        // "https://api.openweathermap.org/data/2.5/weather?q=mumbai&appid=1e9daa69c1df496ee8275c163e1721bf");
+        "https://jsonplaceholder.typicode.com/todos/1");
     var response = await http.get(url);
     Map data = jsonDecode(response.body);
     print(data);
