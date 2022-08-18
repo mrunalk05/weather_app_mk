@@ -30,9 +30,9 @@ class _LoadingState extends State<Loading> {
     var url = Uri.parse(
         "https://api.openweathermap.org/data/2.5/weather?q=mumbai&appid=1e9daa69c1df496ee8275c163e1721bf");
     var response = await http.get(url);
-    Map<String, dynamic> data = jsonDecode(response.body);
-    Map<String, dynamic> weatherdata = data['weather'];
-    String desc= weatherdata['description'];
+    Map data = jsonDecode(response.body);
+    Map weatherdata = data['weather'];
+    String desc = weatherdata['description'];
     print(desc);
   }
 
