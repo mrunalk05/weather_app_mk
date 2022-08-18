@@ -19,14 +19,6 @@ class _LoadingState extends State<Loading> {
   // }
   // late Future<Album> futurealbum;
 
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-    gettime();
-    // futurealbum = fetchAlbum();
-  }
-
   void gettime() async {
     var url = Uri.parse(
         // "https://api.openweathermap.org/data/2.5/weather?q=mumbai&appid=1e9daa69c1df496ee8275c163e1721bf");
@@ -37,6 +29,14 @@ class _LoadingState extends State<Loading> {
     // Map weatherdata = data['weather'];
     // String desc = weatherdata['description'];
     // print(data);
+  }
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    gettime();
+    // futurealbum = fetchAlbum();
   }
 
   @override
