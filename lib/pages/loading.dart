@@ -28,7 +28,8 @@ class _LoadingState extends State<Loading> {
 
     Map weatherdata = data['weather'];
     final String desc = weatherdata['description'];
-    print(desc);
+    print(data);
+    //print(desc);
   }
 
   @override
