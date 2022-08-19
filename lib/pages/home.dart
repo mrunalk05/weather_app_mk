@@ -16,14 +16,18 @@ class _HomeState extends State<Home> {
         centerTitle: true,
         backgroundColor: Color(0xff012c4f),
       ),
-      body: Column(children: [
-        FlatButton.icon(
-            onPressed: () {
-              Navigator.pushNamed(context, '/location');
-            },
-            icon: Icon(Icons.edit_location),
-            label: Text(info["temp"])),
-      ]),
+      body: Padding(padding: EdgeInsets.all(2.0),
+      child: Text(info['temp_value']),)
+            
+        // FlatButton.icon(
+        //     onPressed: () {
+        //       Navigator.pushNamed(context, '/location');
+        //     },
+        //     icon: Icon(Icons.edit_location),
+        //     label: Text('location')),
+           
+      ),
+       
     );
   }
 }
