@@ -27,7 +27,7 @@ class _LoadingState extends State<Loading> {
     Map data = jsonDecode(response.body);
 
     List weatherdata = data['data'];
-    Map weatherdatamain = weatherdata[0];
+    //Map weatherdatamain = weatherdata[0];
 
     // Map desc = jsonDecode(weatherdata['weather']);
 
