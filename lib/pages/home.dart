@@ -22,7 +22,7 @@ class _HomeState extends State<Home> {
               Navigator.pushNamed(context, '/location');
             },
             icon: Icon(Icons.edit_location),
-            label: Text('mk')),
+            label: Text(info["temp"])),
       ]),
     );
   }
