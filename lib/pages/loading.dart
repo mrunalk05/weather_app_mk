@@ -15,7 +15,7 @@ class _LoadingState extends State<Loading> {
   void StartApp() async {
     worker instance = worker(location: 'Mumbai');
     await instance.getData();
-    print(instance.pressure);
+    print(instance.air_speed);
   }
 
   @override
