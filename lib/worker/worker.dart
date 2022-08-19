@@ -16,7 +16,7 @@ class worker {
   String? temp;
   String? temp_min;
   String? temp_max;
-  int pressure;
+  int? pressure;
   String? humidity;
   String? speed;
   String? sunrise;
