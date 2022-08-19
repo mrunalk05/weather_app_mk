@@ -8,7 +8,7 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
-    Map info = ModalRoute.of(context)?.settings.arguments as Map;
+    //Map info = ModalRoute.of(context)?.settings.arguments as Map;
     return Scaffold(
       backgroundColor: Colors.blue[50],
       appBar: AppBar(
@@ -22,7 +22,7 @@ class _HomeState extends State<Home> {
               Navigator.pushNamed(context, '/location');
             },
             icon: Icon(Icons.edit_location),
-            label: Text(info["temp"])),
+            label: Text('mk')),
       ]),
     );
   }
