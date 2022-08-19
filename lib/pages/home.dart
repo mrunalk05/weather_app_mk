@@ -18,7 +18,7 @@ class _HomeState extends State<Home> {
         ),
         body: Padding(
           padding: EdgeInsets.all(2.0),
-          child: Text(info['temp_value']),
+          child: Text(info['pre']),
         )
 
         // FlatButton.icon(
