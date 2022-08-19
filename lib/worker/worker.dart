@@ -63,7 +63,7 @@ class worker {
     double getTemp = main['temp'];
     double getTemp_max = main['temp_max'];
     double getTemp_min = main['temp_min'];
-    String getPressure = main['pressure'].toString();
+    int getPressure = main['pressure'];
     String getHumidity = main['humidity'];
 
     Map<String, dynamic> wind = data['wind'];
@@ -77,7 +77,7 @@ class worker {
     String temp = getTemp.toString();
     String temp_min = getTemp_min.toString();
     String temp_max = getTemp_max.toString();
-    String pressure = getPressure;
+    String pressure = getPressure.toString();
     String humidity = getHumidity.toString();
     String speed = getSpeed.toString();
     String sunrise = getSunrise.toString();
