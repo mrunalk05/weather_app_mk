@@ -11,9 +11,9 @@ class Loading extends StatefulWidget {
 }
 
 class _LoadingState extends State<Loading> {
-  worker instance = worker(location: 'Mumbai');
+  worker instance = worker(location: 'delhi');
   void StartApp() async {
-    worker instance = worker(location: 'Mumbai');
+    worker instance = worker(location: 'delhi');
     await instance.getData();
     temp = instance.air_speed;
     temp_max = instance.temp_max;
