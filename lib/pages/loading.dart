@@ -17,12 +17,12 @@ class _LoadingState extends State<Loading> {
     await instance.getData();
     print(instance.pressure);
   }
-  
 
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
+    StartApp();
 
     // futurealbum = fetchAlbum();
   }
