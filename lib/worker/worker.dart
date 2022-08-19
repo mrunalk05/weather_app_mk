@@ -16,7 +16,7 @@ class worker {
   String? temp;
   String? temp_min;
   String? temp_max;
-  String? pressure;
+  int pressure;
   String? humidity;
   String? speed;
   String? sunrise;
@@ -77,7 +77,7 @@ class worker {
     String temp = getTemp.toString();
     String temp_min = getTemp_min.toString();
     String temp_max = getTemp_max.toString();
-   // String pressure = getPressure.toString();
+    // String pressure = getPressure.toString();
     String humidity = getHumidity.toString();
     String speed = getSpeed.toString();
     String sunrise = getSunrise.toString();
