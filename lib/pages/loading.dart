@@ -1,6 +1,5 @@
 //import 'dart:ffi';
 
-
 import 'package:flutter/material.dart';
 import 'package:timeapp/worker/worker.dart';
 import 'package:http/http.dart' as http;
@@ -27,14 +26,14 @@ class _LoadingState extends State<Loading> {
     var response = await http.get(url);
     Map data = jsonDecode(response.body);
 
-    Map weatherdata = data['weather'];
-    Map ab = weatherdata['temp'];
+    List weatherdata= data['data'];
+    Map weatherdatamain= weatherdata[0];
 
     // Map desc = jsonDecode(weatherdata['weather']);
 
     //String desc = weatherdata['description'];
-    print(weatherdata);
-    print(ab);
+   print(weatherdata);
+    print(weatherdatamain);
   }
 
   @override
