@@ -33,7 +33,7 @@ class _LoadingState extends State<Loading> {
 
     //String desc = weatherdata['description'];
     print(weatherdata);
-    print(weatherdatamain['main']);
+    //print(weatherdatamain['main']);
   }
 
   @override
