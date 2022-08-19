@@ -15,8 +15,31 @@ class _LoadingState extends State<Loading> {
   void StartApp() async {
     worker instance = worker(location: 'Mumbai');
     await instance.getData();
-    print(instance.air_speed);
+    temp = instance.air_speed;
+    temp_max = instance.temp_max;
+    temp_min = instance.temp_min;
+    humidity = instance.humidity;
+    pressure = instance.pressure;
+    air_speed = instance.air_speed;
+    description = instance.description;
+    Navigator.pushNamed(context, '/home', arguments: {
+      "temp_value": temp,
+      "tempmax": temp_max,
+      "tempmin": temp_min,
+      "humi": humidity,
+      "pre": pressure,
+      "air": air_speed,
+      "des": description,
+    });
   }
+
+  String? temp;
+  String? temp_max;
+  String? temp_min;
+  String? humidity;
+  String? pressure;
+  String? air_speed;
+  String? description;
 
   @override
   void initState() {
