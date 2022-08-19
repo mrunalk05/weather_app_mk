@@ -26,8 +26,8 @@ class _LoadingState extends State<Loading> {
     var response = await http.get(url);
     Map data = jsonDecode(response.body);
 
-    List weatherdata = data['data'];
-   // Map weatherdatamain = weatherdata[0];
+    List weatherdata = data['weather'];
+    // Map weatherdatamain = weatherdata[0];
 
     // Map desc = jsonDecode(weatherdata['weather']);
 
