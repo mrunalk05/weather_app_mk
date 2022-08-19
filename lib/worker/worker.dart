@@ -7,6 +7,11 @@ import 'dart:convert';
 
 class worker {
   String? location;
+
+  worker({this.location}) {
+    location = this.location;
+  }
+
   String? description;
   String? temp;
   String? temp_min;
@@ -17,28 +22,29 @@ class worker {
   String? sunrise;
   String? sunset;
 
-  worker(
-      {required this.location,
-      required this.description,
-      required this.temp,
-      required this.temp_max,
-      required this.temp_min,
-      required this.pressure,
-      required this.humidity,
-      required this.speed,
-      required this.sunrise,
-      required this.sunset}) {
-    location = this.location;
-    description = this.description;
-    temp = this.temp;
-    temp_max = this.temp_max;
-    temp_min = this.temp_min;
-    pressure = this.pressure;
-    humidity = this.humidity;
-    speed = this.speed;
-    sunrise = this.sunrise;
-    sunset = this.sunset;
-  }
+  // worker(
+
+  //     {required this.location,
+  //     required this.description,
+  //     required this.temp,
+  //     required this.temp_max,
+  //     required this.temp_min,
+  //     required this.pressure,
+  //     required this.humidity,
+  //     required this.speed,
+  //     required this.sunrise,
+  //     required this.sunset}) {
+  //   location = this.location;
+  //   description = this.description;
+  //   temp = this.temp;
+  //   temp_max = this.temp_max;
+  //   temp_min = this.temp_min;
+  //   pressure = this.pressure;
+  //   humidity = this.humidity;
+  //   speed = this.speed;
+  //   sunrise = this.sunrise;
+  //   sunset = this.sunset;
+  // }
 
   Future<void> getData() async {
     var url = Uri.parse(

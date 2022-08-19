@@ -11,13 +11,13 @@ class Loading extends StatefulWidget {
 }
 
 class _LoadingState extends State<Loading> {
-  // worker instance = worker(location: 'Mumbai');
-  // void StartApp() async {
-  //   worker instance = worker(location: 'Mumbai');
-  //   await instance.getData();
-  //   print(instance.description);
-  // }
-  // late Future<Album> futurealbum;
+  worker instance = worker(location: 'Mumbai');
+  void StartApp() async {
+    worker instance = worker(location: 'Mumbai');
+    await instance.getData();
+    print(instance.pressure);
+  }
+  
 
   @override
   void initState() {
