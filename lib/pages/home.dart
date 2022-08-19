@@ -26,8 +26,8 @@ class _HomeState extends State<Home> {
         //     icon: Icon(Icons.edit_location),
         //     label: Text('location')),
            
-      ),
+      );
        
-    );
+    
   }
 }
