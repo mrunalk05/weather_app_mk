@@ -15,7 +15,10 @@ class _HomeState extends State<Home> {
     //  String x = ((info['hum']).toString().substring(0, 4));
     return Scaffold(
       body: Column(
-        children: [FloatingActionButton(onPressed: () {}), Text(info['temp_value'])],
+        children: [
+          FloatingActionButton(onPressed: () {}),
+          Text(info['temp_value'])
+        ],
       ),
     );
   }
