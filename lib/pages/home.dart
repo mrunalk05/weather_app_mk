@@ -13,25 +13,16 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     Map info = ModalRoute.of(context)!.settings.arguments as Map;
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Home Activity"),
-      ),
-      body:
-          Column(
-            children: <Widget>[
-              Container(
-                child: FloatingActionButton(
-                onPressed: () {},
-               child: Text(info["main_value"])
-              ),
-               
-              )
-              
-            ],   
-          )
-
-
-
-    );
+        appBar: AppBar(
+          title: Text("Home Activity"),
+        ),
+        body: Column(
+          children: <Widget>[
+            Container(
+              child: FloatingActionButton(
+                  onPressed: () {}, child: Text(info["temp"])),
+            )
+          ],
+        ));
   }
 }
