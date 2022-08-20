@@ -18,10 +18,10 @@ class _HomeState extends State<Home> {
         ),
         body: Column(
           children: <Widget>[
-            Container(
-              child: FloatingActionButton(
+           // Container(
+              FloatingActionButton(
                   onPressed: () {}, child: Text(info["temp"])),
-            )
+            
           ],
         ));
   }
