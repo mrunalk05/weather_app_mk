@@ -45,7 +45,7 @@ class _LoadingState extends State<Loading> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    StartApp();
+    // StartApp();
 
     // futurealbum = fetchAlbum();
   }
@@ -55,11 +55,17 @@ class _LoadingState extends State<Loading> {
     return Scaffold(
       backgroundColor: Colors.blue[50],
       appBar: AppBar(
-        title: Text('Weather'),
+        title: Text('Weather Update'),
         centerTitle: true,
         backgroundColor: Color(0xff012c4f),
       ),
-      body: Text('Welcome to Loading page!!'),
+      body: Column(
+         children: [
+           Text("Fresh Express"),
+           Text("Todays Weather"),
+           Image.network('https://media-exp2.licdn.com/dms/image/C510BAQEas6Br-ACNLg/company-logo_200_200/0/1519904654756?e=2147483647&v=beta&t=NxP3_oIkewoecBmZqmCUn1wjEeiwCWHnbx2dkGoDUxM')
+         ],
+      )
     );
   }
 }

@@ -26,14 +26,14 @@ class worker {
 
     Map temp_data = data['main'];
     String getHumidity = temp_data['humidity'].toString();
-    double getTemp = temp_data['temp'];
+    double getTemp = temp_data['temp'] - 273.15;
     String getPressure = temp_data['pressure'].toString();
     double getTempMax = temp_data['temp_max'];
     double getTempMin = temp_data['temp_min'];
 
 //Getting air_speed
     Map wind = data['wind'];
-    double getAir_speed = wind["speed"];
+    double getAir_speed = wind["speed"] / 0.27777777777778;
 
     List weather_data = data['weather'];
     Map weather_main_data = weather_data[0];
