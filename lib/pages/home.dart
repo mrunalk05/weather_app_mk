@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
@@ -16,9 +17,13 @@ class _HomeState extends State<Home> {
           centerTitle: true,
           backgroundColor: Color(0xff012c4f),
         ),
-        body: Padding(
-          padding: EdgeInsets.all(2.0),
-          child: Text(info['pre']),
+        body: Column(
+          children: [
+            FloatingActionButton(
+              onPressed: (() {}),
+            ),
+            Text(info['humi'])
+          ],
         )
 
         // FlatButton.icon(
