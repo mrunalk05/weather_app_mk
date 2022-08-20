@@ -16,12 +16,13 @@ class _HomeState extends State<Home> {
         appBar: AppBar(
           title: Text("Home Activity"),
         ),
-        body: Column(
-          children: <Widget>[
+        body:
+         
             // Container(
             FloatingActionButton(onPressed: () {}, child: Text(info["pre"])),
             //FloatingActionButton(onPressed: () {}, child: Text(info["hum"])),
-          ],
-        ));
+          
+          
+        );
   }
 }
