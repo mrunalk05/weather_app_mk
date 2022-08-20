@@ -60,9 +60,10 @@ class _LoadingState extends State<Loading> {
           backgroundColor: Color(0xff012c4f),
         ),
         body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+         // mainAxisAlignment: MainAxisAlignment.center,
+          
           children: [
-           // mainAxisAlignment: MainAxisAlignment.center,
+            // mainAxisAlignment: MainAxisAlignment.center,
             Text("Fresh Express"),
             Text("Todays Weather"),
             Image.network(
