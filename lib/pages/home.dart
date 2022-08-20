@@ -16,41 +16,41 @@ class _HomeState extends State<Home> {
     // var city = city_name[_random.nextInt(city_name.length)];
 
     return Scaffold(
-
       body: SafeArea(
-
         child: Container(
           child: Column(
             children: [
-              Container( //Search Wala Container
+              Container(
+                //Search Wala Container
 
                 padding: EdgeInsets.symmetric(horizontal: 8),
-                margin: EdgeInsets.symmetric(horizontal: 24,vertical: 20),
+                margin: EdgeInsets.symmetric(horizontal: 24, vertical: 20),
                 decoration: BoxDecoration(
-                  color: Colors.black12,
-                  borderRadius: BorderRadius.circular(24)
-                ),
+                    color: Colors.black12,
+                    borderRadius: BorderRadius.circular(24)),
                 child: Row(
-
                   children: [
-                   GestureDetector(
-                     onTap: () {
-                       print("Search Me");
-                     },
-                     child: Container(child: Icon(Icons.search,color: Colors.blueAccent,),margin: EdgeInsets.fromLTRB(3, 0, 7, 0),),
-                   ),
+                    GestureDetector(
+                      onTap: () {
+                        print("Search Me");
+                      },
+                      child: Container(
+                        child: Icon(
+                          Icons.search,
+                          color: Colors.blueAccent,
+                        ),
+                        margin: EdgeInsets.fromLTRB(3, 0, 7, 0),
+                      ),
+                    ),
                     Expanded(
                       child: TextField(
-                      decoration: InputDecoration(
-                        border: InputBorder.none,
-                        hintText: "Search"
-                      ),
+                        decoration: InputDecoration(
+                            border: InputBorder.none, hintText: "Search"),
                       ),
                     )
                   ],
                 ),
               ),
-
             ],
           ),
         ),
@@ -59,40 +59,24 @@ class _HomeState extends State<Home> {
   }
 }
 
+// backgroundColor: Colors.blue[50],
+// appBar: AppBar(
+//   title: Text('Weather'),
+//   centerTitle: true,
+//   backgroundColor: Color(0xff012c4f),
+// ),
+// body: Column(
+//   children: [
+//     FloatingActionButton(
+//       onPressed: (() {}),
+//     ),
+//     Text(info['humi'])
+//   ],
+// )
 
-
-
-
-
-
-
-
-
-
-
-        // backgroundColor: Colors.blue[50],
-        // appBar: AppBar(
-        //   title: Text('Weather'),
-        //   centerTitle: true,
-        //   backgroundColor: Color(0xff012c4f),
-        // ),
-        // body: Column(
-        //   children: [
-        //     FloatingActionButton(
-        //       onPressed: (() {}),
-        //     ),
-        //     Text(info['humi'])
-        //   ],
-        // )
-
-        // // FlatButton.icon(
-        // //     onPressed: () {
-        // //       Navigator.pushNamed(context, '/location');
-        // //     },
-        // //     icon: Icon(Icons.edit_location),
-        // //     label: Text('location')),
-
-        
-  
-
-
+// // FlatButton.icon(
+// //     onPressed: () {
+// //       Navigator.pushNamed(context, '/location');
+// //     },
+// //     icon: Icon(Icons.edit_location),
+// //     label: Text('location')),
