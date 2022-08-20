@@ -12,7 +12,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     Map info = ModalRoute.of(context)!.settings.arguments as Map;
-    print((info['pre']).toString().substring(0,4));
+    print((info['pre']));
     return Scaffold(
       body: SafeArea(
         child: Container(
