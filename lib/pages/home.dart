@@ -14,15 +14,9 @@ class _HomeState extends State<Home> {
     Map info = ModalRoute.of(context)!.settings.arguments as Map;
     //  String x = ((info['hum']).toString().substring(0, 4));
     return Scaffold(
-        body: Column(
-           children: [
-             FloatingActionButton(onPressed: (){}),
-             Text(info['pre'])
-           ],
-           
-
-        ),
-    ) ;    
-           
+      body: Column(
+        children: [FloatingActionButton(onPressed: () {}), Text(info['temp_value'])],
+      ),
+    );
   }
 }
