@@ -14,45 +14,15 @@ class _HomeState extends State<Home> {
     Map info = ModalRoute.of(context)!.settings.arguments as Map;
     //  String x = ((info['hum']).toString().substring(0, 4));
     return Scaffold(
-      body: SafeArea(
-        child: Container(
-          child: Column(
-            children: [
-              Container(
-                //Search Wala Container
+        body: Column(
+           children: [
+             FloatingActionButton(onPressed: (){}),
+             Text(info['pre'])
+           ],
+           
 
-                padding: EdgeInsets.symmetric(horizontal: 8),
-                margin: EdgeInsets.symmetric(horizontal: 24, vertical: 20),
-                decoration: BoxDecoration(
-                    color: Colors.black12,
-                    borderRadius: BorderRadius.circular(24)),
-                child: Row(
-                  children: [
-                    GestureDetector(
-                      onTap: () {
-                        print("Search Me");
-                      },
-                      child: Container(
-                        child: Icon(
-                          Icons.search,
-                          color: Colors.blueAccent,
-                        ),
-                        margin: EdgeInsets.fromLTRB(3, 0, 7, 0),
-                      ),
-                    ),
-                    Expanded(
-                      child: TextField(
-                        decoration: InputDecoration(
-                            border: InputBorder.none, hintText: "Search city"),
-                      ),
-                    )
-                  ],
-                ),
-              ),
-            ],
-          ),
         ),
-      ),
-    );
+    ) ;    
+           
   }
 }
