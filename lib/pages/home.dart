@@ -20,6 +20,7 @@ class _HomeState extends State<Home> {
           children: <Widget>[
             // Container(
             FloatingActionButton(onPressed: () {}, child: Text(info["pre"])),
+            FloatingActionButton(onPressed: () {}, child: Text(info["hum"])),
           ],
         ));
   }
