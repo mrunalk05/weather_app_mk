@@ -53,19 +53,20 @@ class _LoadingState extends State<Loading> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue[50],
-      appBar: AppBar(
-        title: Text('Weather Update'),
-        centerTitle: true,
-        backgroundColor: Color(0xff012c4f),
-      ),
-      body: Column(
-         children: [
-           Text("Fresh Express"),
-           Text("Todays Weather"),
-           Image.network('https://media-exp2.licdn.com/dms/image/C510BAQEas6Br-ACNLg/company-logo_200_200/0/1519904654756?e=2147483647&v=beta&t=NxP3_oIkewoecBmZqmCUn1wjEeiwCWHnbx2dkGoDUxM')
-         ],
-      )
-    );
+        backgroundColor: Colors.blue[50],
+        appBar: AppBar(
+          title: Text('Weather Update'),
+          centerTitle: true,
+          backgroundColor: Color(0xff012c4f),
+        ),
+        body: Column(
+          children: [
+            Padding(padding: EdgeInsets.all(2.0)),
+            Text("Fresh Express"),
+            Text("Todays Weather"),
+            Image.network(
+                'https://media-exp2.licdn.com/dms/image/C510BAQEas6Br-ACNLg/company-logo_200_200/0/1519904654756?e=2147483647&v=beta&t=NxP3_oIkewoecBmZqmCUn1wjEeiwCWHnbx2dkGoDUxM')
+          ],
+        ));
   }
 }
