@@ -61,7 +61,6 @@ class _LoadingState extends State<Loading> {
         ),
         body: Column(
           children: [
-            Padding(padding: EdgeInsets.all(2.0)),
             Text("Fresh Express"),
             Text("Todays Weather"),
             Image.network(
