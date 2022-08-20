@@ -45,7 +45,7 @@ class _LoadingState extends State<Loading> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    // StartApp();
+    StartApp();
 
     // futurealbum = fetchAlbum();
   }

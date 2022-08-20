@@ -11,72 +11,27 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
-    // var city_name = ["Mumbai", "Delhi","Chennai", "Dhar", "Indore", "London"];
-    // final _random = new Random();
-    // var city = city_name[_random.nextInt(city_name.length)];
-
+    Map info = ModalRoute.of(context)!.settings.arguments as Map;
     return Scaffold(
-      body: SafeArea(
-        child: Container(
-          child: Column(
-            children: [
-              Container(
-                //Search Wala Container
-
-                padding: EdgeInsets.symmetric(horizontal: 8),
-                margin: EdgeInsets.symmetric(horizontal: 24, vertical: 20),
-                decoration: BoxDecoration(
-                    color: Colors.black12,
-                    borderRadius: BorderRadius.circular(24)),
-                child: Row(
-                  children: [
-                    GestureDetector(
-                      onTap: () {
-                        print("Search Me");
-                      },
-                      child: Container(
-                        child: Icon(
-                          Icons.search,
-                          color: Colors.blueAccent,
-                        ),
-                        margin: EdgeInsets.fromLTRB(3, 0, 7, 0),
-                      ),
-                    ),
-                    Expanded(
-                      child: TextField(
-                        decoration: InputDecoration(
-                            border: InputBorder.none, hintText: "Search"),
-                      ),
-                    )
-                  ],
-                ),
-              ),
-            ],
-          ),
-        ),
+      appBar: AppBar(
+        title: Text("Home Activity"),
       ),
+      body:
+          Column(
+            children: <Widget>[
+              Container(
+                child: FloatingActionButton(
+                onPressed: () {},
+               child: Text(info["main_value"])
+              ),
+               
+              )
+              
+            ],   
+          )
+
+
+
     );
   }
 }
-
-// backgroundColor: Colors.blue[50],
-// appBar: AppBar(
-//   title: Text('Weather'),
-//   centerTitle: true,
-//   backgroundColor: Color(0xff012c4f),
-// ),
-// body: Column(
-//   children: [
-//     FloatingActionButton(
-//       onPressed: (() {}),
-//     ),
-//     Text(info['humi'])
-//   ],
-// )
-
-// // FlatButton.icon(
-// //     onPressed: () {
-// //       Navigator.pushNamed(context, '/location');
-// //     },
-// //     icon: Icon(Icons.edit_location),
-// //     label: Text('location')),
