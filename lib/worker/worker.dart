@@ -1,5 +1,6 @@
 import 'package:http/http.dart' as http;
 import 'dart:convert';
+import 'package:intl/intl.dart';
 
 class worker {
   String? location;
@@ -9,7 +10,7 @@ class worker {
   worker({this.location}) {
     location = this.location;
   }
-
+  String? city;
   String? temp;
   String? temp_max;
   String? temp_min;
@@ -17,6 +18,7 @@ class worker {
   String? pressure;
   String? air_speed;
   String? description;
+  String? time;
 
   Future<void> getData() async {
     var url = Uri.parse(
@@ -40,12 +42,12 @@ class worker {
     String getDesc = weather_main_data["description"];
 
     //Assigning Values
-    temp = getTemp.toString();
-    humidity = getHumidity;
-    air_speed = getAir_speed.toString();
+    temp = getTemp.toString().substring(0, 4);
+    humidity = getHumidity; //.substring(0, 4);
+    air_speed = getAir_speed.toString().substring(0, 4);
     description = getDesc;
     pressure = getPressure;
-    temp_min = getTempMin.toString();
-    temp_max = getTempMax.toString();
+    temp_min = getTempMin.toString().substring(0, 4);
+    temp_max = getTempMax.toString().substring(0, 4);
   }
 }

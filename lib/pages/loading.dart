@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:timeapp/worker/worker.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
+import 'package:intl/intl.dart';
 
 class Loading extends StatefulWidget {
   const Loading({Key? key}) : super(key: key);
@@ -11,10 +12,12 @@ class Loading extends StatefulWidget {
 }
 
 class _LoadingState extends State<Loading> {
-  worker instance = worker(location: 'delhi');
+  worker instance = worker(location: 'mumbai');
   void StartApp() async {
-    worker instance = worker(location: 'delhi');
+    worker instance = worker(location: 'mumbai');
     await instance.getData();
+    //time = instance.time;
+    city = instance.city;
     temp = instance.air_speed;
     temp_max = instance.temp_max;
     temp_min = instance.temp_min;
@@ -30,9 +33,11 @@ class _LoadingState extends State<Loading> {
       "pre": pressure,
       "air": air_speed,
       "des": description,
+      "city": city
     });
   }
 
+  String? city;
   String? temp;
   String? temp_max;
   String? temp_min;
